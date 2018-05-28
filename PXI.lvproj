@@ -165,7 +165,7 @@ AddOutputFilter chunkFilter
 				<Property Name="BuildSpec" Type="Str">{DACCE1C6-2284-4E17-A0E0-0B16C7DDE99A}</Property>
 				<Property Name="configString.guid" Type="Str">{4007DA1A-ACCF-482B-9E5A-2009DDC421C2}Arbitration=AlwaysArbitrate;resource=/Connector0/AI0;0;ReadMethodType=I16{8B189CC2-3AA2-44E5-8070-FB58154C3DA0}"ControlLogic=0;NumberOfElements=1023;Type=2;ReadArbs=Arbitrate if Multiple Requestors Only;ElementsPerRead=1;WriteArbs=Arbitrate if Multiple Requestors Only;ElementsPerWrite=1;Implementation=2;FIFO;DataType=100080000000000100094009000353474C000100000000000000000000;DisableOnOverflowUnderflow=FALSE"{B23BA0D5-CF10-424B-B042-3D77066B2559}ResourceName=40 MHz Onboard Clock;TopSignalConnect=Clk40;ClockSignalName=Clk40;MinFreq=40000000.000000;MaxFreq=40000000.000000;VariableFreq=0;NomFreq=40000000.000000;PeakPeriodJitter=250.000000;MinDutyCycle=50.000000;MaxDutyCycle=50.000000;Accuracy=100.000000;RunTime=0;SpreadSpectrum=0;GenericDataHash=D41D8CD98F00B204E9800998ECF8427E;PXI-7852R/Clk40/falsefalseFPGA_EXECUTION_MODEFPGA_TARGETFPGA_TARGET_CLASSPXI_7852RFPGA_TARGET_FAMILYVIRTEX5TARGET_TYPEFPGA/[rSeriesConfig.Begin][rSeriesConfig.End]</Property>
 				<Property Name="configString.name" Type="Str">40 MHz Onboard ClockResourceName=40 MHz Onboard Clock;TopSignalConnect=Clk40;ClockSignalName=Clk40;MinFreq=40000000.000000;MaxFreq=40000000.000000;VariableFreq=0;NomFreq=40000000.000000;PeakPeriodJitter=250.000000;MinDutyCycle=50.000000;MaxDutyCycle=50.000000;Accuracy=100.000000;RunTime=0;SpreadSpectrum=0;GenericDataHash=D41D8CD98F00B204E9800998ECF8427E;Connector0/AI0Arbitration=AlwaysArbitrate;resource=/Connector0/AI0;0;ReadMethodType=I16FIFO"ControlLogic=0;NumberOfElements=1023;Type=2;ReadArbs=Arbitrate if Multiple Requestors Only;ElementsPerRead=1;WriteArbs=Arbitrate if Multiple Requestors Only;ElementsPerWrite=1;Implementation=2;FIFO;DataType=100080000000000100094009000353474C000100000000000000000000;DisableOnOverflowUnderflow=FALSE"PXI-7852R/Clk40/falsefalseFPGA_EXECUTION_MODEFPGA_TARGETFPGA_TARGET_CLASSPXI_7852RFPGA_TARGET_FAMILYVIRTEX5TARGET_TYPEFPGA/[rSeriesConfig.Begin][rSeriesConfig.End]</Property>
-				<Property Name="NI.LV.FPGA.InterfaceBitfile" Type="Str">F:\PXI\FPGA Bitfiles\PXI_FPGATarget_FPGA_QsTSA8TDXow.lvbitx</Property>
+				<Property Name="NI.LV.FPGA.InterfaceBitfile" Type="Str">F:\PXI_ADAM\PXI-Project\FPGA Bitfiles\PXI_FPGATarget_FPGA_z50FCp+1-Jo.lvbitx</Property>
 			</Item>
 			<Item Name="IP Builder" Type="IP Builder Target">
 				<Item Name="Dependencies" Type="Dependencies"/>
@@ -205,8 +205,8 @@ AddOutputFilter chunkFilter
 					<Property Name="Comp.Xilinx.UseRecommended" Type="Bool">true</Property>
 					<Property Name="DefaultBuildSpec" Type="Bool">true</Property>
 					<Property Name="DestinationDirectory" Type="Path">FPGA Bitfiles</Property>
-					<Property Name="NI.LV.FPGA.LastCompiledBitfilePath" Type="Path">/F/PXI/FPGA Bitfiles/PXI_FPGATarget_FPGA_QsTSA8TDXow.lvbitx</Property>
-					<Property Name="NI.LV.FPGA.LastCompiledBitfilePathRelativeToProject" Type="Path">FPGA Bitfiles/PXI_FPGATarget_FPGA_QsTSA8TDXow.lvbitx</Property>
+					<Property Name="NI.LV.FPGA.LastCompiledBitfilePath" Type="Path">/F/PXI_ADAM/PXI-Project/FPGA Bitfiles/PXI_FPGATarget_FPGA_z50FCp+1-Jo.lvbitx</Property>
+					<Property Name="NI.LV.FPGA.LastCompiledBitfilePathRelativeToProject" Type="Path">FPGA Bitfiles/PXI_FPGATarget_FPGA_z50FCp+1-Jo.lvbitx</Property>
 					<Property Name="ProjectPath" Type="Path">/F/PXI/PXI.lvproj</Property>
 					<Property Name="RelativePath" Type="Bool">true</Property>
 					<Property Name="RunWhenLoaded" Type="Bool">false</Property>
@@ -218,7 +218,14 @@ AddOutputFilter chunkFilter
 			</Item>
 		</Item>
 		<Item Name="RT.vi" Type="VI" URL="../RT.vi"/>
-		<Item Name="Dependencies" Type="Dependencies"/>
+		<Item Name="Dependencies" Type="Dependencies">
+			<Item Name="vi.lib" Type="Folder">
+				<Item Name="Error Cluster From Error Code.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Error Cluster From Error Code.vi"/>
+			</Item>
+			<Item Name="NiFpgaLv.dll" Type="Document" URL="NiFpgaLv.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
+		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
 </Project>
